@@ -14,8 +14,8 @@ const ImageSlider = () => {
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_eNUC7BRwHHoRKYdN3AYR_h2fvSNXrOaWJQ&usqp=CAU",
   ];
   return (
-    <div>
-      <img src={data[0]} />
+    <div className="text-center m-4 p-4">
+      <img className="mx-auto h-96 w-96" src={data[0]} />
     </div>
   );
 };
