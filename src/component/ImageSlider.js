@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 
 const ImageSlider = () => {
   const data = [
@@ -13,11 +14,26 @@ const ImageSlider = () => {
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoElfe-j7IMKr-Axj2-LzPLyrJEGMoRgojDA&usqp=CAU",
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_eNUC7BRwHHoRKYdN3AYR_h2fvSNXrOaWJQ&usqp=CAU",
   ];
+  const [currentImg, setCurrentImg] = useState(0);
   return (
     <div className="flex justify-center m-4 p-4">
-      <button className="mr-8 pr-8">⏮️</button>
-      <img className="h-96 w-96" src={data[0]} />
-      <button className="ml-8 pl-8">⏭️</button>
+      <button
+        className="mr-8 pr-8"
+        onClick={() => setCurrentImg(currentImg - 1)}
+      >
+        ⏮️
+      </button>
+      <img
+        className="w-[700px] h-[700px] rounded-2xl"
+        src={data[currentImg]}
+        alt="wallpaper"
+      />
+      <button
+        className="ml-8 pl-8"
+        onClick={() => setCurrentImg(currentImg + 1)}
+      >
+        ⏭️
+      </button>
     </div>
   );
 };
