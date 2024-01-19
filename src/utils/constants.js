@@ -9,4 +9,8 @@ export const data = [
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsOsVrOcN7pQhUrNlzCa6WOg9K9siPyTbwiw&usqp=CAU",
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoElfe-j7IMKr-Axj2-LzPLyrJEGMoRgojDA&usqp=CAU",
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_eNUC7BRwHHoRKYdN3AYR_h2fvSNXrOaWJQ&usqp=CAU",
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtCU0qmpMbKcamy14MbargZYsOzd8CSYkDQw&usqp=CAU",
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq9la1KLWmUkxBlFjdThYPeztkMjHch4dEMg&usqp=CAU",
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyIDgtNXh7-W9SSVlKbAbA1v1-nBS6lsDffA&usqp=CAU",
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMPNOUaG0hxWkqcu8w3LVQxyYtFkn3wB_Qlw&usqp=CAU",
 ];
