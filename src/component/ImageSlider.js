@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const ImageSlider = () => {
   const data = [
@@ -29,6 +29,14 @@ const ImageSlider = () => {
       setCurrentImg(currentImg + 1);
     }
   };
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      handleNextClick();
+    }, 2500);
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [currentImg]);
   return (
     <div className="flex justify-center m-4 p-4">
       <button className="mr-8 pr-8" onClick={handlePreviousClick}>
