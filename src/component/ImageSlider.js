@@ -16,10 +16,18 @@ const ImageSlider = () => {
   ];
   const [currentImg, setCurrentImg] = useState(0);
   const handlePreviousClick = () => {
-    setCurrentImg(currentImg - 1);
+    if (currentImg === 0) {
+      setCurrentImg(data.length - 1);
+    } else {
+      setCurrentImg(currentImg - 1);
+    }
   };
   const handleNextClick = () => {
-    setCurrentImg(currentImg + 1);
+    if (currentImg === data.length - 1) {
+      setCurrentImg(0);
+    } else {
+      setCurrentImg(currentImg + 1);
+    }
   };
   return (
     <div className="flex justify-center m-4 p-4">
