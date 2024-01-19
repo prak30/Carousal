@@ -16,10 +16,10 @@ const ImageSlider = () => {
   ];
   const [currentImg, setCurrentImg] = useState(0);
   const handlePreviousClick = () => {
-    if (currentImg === 0) {
-      setCurrentImg(data.length - 1);
-    } else {
-      setCurrentImg(currentImg - 1);
+    {
+      currentImg === 0
+        ? setCurrentImg(data.length - 1)
+        : setCurrentImg(currentImg - 1);
     }
   };
   const handleNextClick = () => {
