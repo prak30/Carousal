@@ -34,11 +34,18 @@ const ImageSlider = () => {
       <button className="mr-8 pr-8" onClick={handlePreviousClick}>
         ⏮️
       </button>
-      <img
-        className="w-[700px] h-[700px] rounded-2xl"
-        src={data[currentImg]}
-        alt="wallpaper"
-      />
+      {data.map((url, index) => (
+        <img
+          key={url}
+          className={
+            "w-[700px] h-[700px] rounded-2xl " +
+            (currentImg === index ? "block" : "hidden")
+          }
+          src={url}
+          alt="wallpaper"
+        />
+      ))}
+
       <button className="ml-8 pl-8" onClick={handleNextClick}>
         ⏭️
       </button>
