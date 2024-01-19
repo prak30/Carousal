@@ -15,12 +15,15 @@ const ImageSlider = () => {
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_eNUC7BRwHHoRKYdN3AYR_h2fvSNXrOaWJQ&usqp=CAU",
   ];
   const [currentImg, setCurrentImg] = useState(0);
+  const handlePreviousClick = () => {
+    setCurrentImg(currentImg - 1);
+  };
+  const handleNextClick = () => {
+    setCurrentImg(currentImg + 1);
+  };
   return (
     <div className="flex justify-center m-4 p-4">
-      <button
-        className="mr-8 pr-8"
-        onClick={() => setCurrentImg(currentImg - 1)}
-      >
+      <button className="mr-8 pr-8" onClick={handlePreviousClick}>
         ⏮️
       </button>
       <img
@@ -28,10 +31,7 @@ const ImageSlider = () => {
         src={data[currentImg]}
         alt="wallpaper"
       />
-      <button
-        className="ml-8 pl-8"
-        onClick={() => setCurrentImg(currentImg + 1)}
-      >
+      <button className="ml-8 pl-8" onClick={handleNextClick}>
         ⏭️
       </button>
     </div>
